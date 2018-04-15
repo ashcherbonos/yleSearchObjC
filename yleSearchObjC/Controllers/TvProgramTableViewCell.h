@@ -10,5 +10,4 @@
 #import "SearchViewModel.h"
 
 @interface TvProgramTableViewCell : UITableViewCell <DataConsumer>
-
 @end

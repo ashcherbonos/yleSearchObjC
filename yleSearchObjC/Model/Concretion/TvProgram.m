@@ -11,7 +11,7 @@
 @implementation TvProgram
 
 - (instancetype)initWithTitle:(NSString *)title
-                  fullDescription:(NSString *)fullDescription
+              fullDescription:(NSString *)fullDescription
                  dataModified:(NSDate *)dataModified
                   programType:(NSString *)programType
               previewImageURL:(NSURL *)previewImageURL

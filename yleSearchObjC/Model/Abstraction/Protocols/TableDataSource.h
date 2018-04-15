@@ -11,5 +11,5 @@
 @protocol TableDataSource <NSObject>
 @property(nonatomic, readonly)NSInteger count;
 - (id)objectAtIndexedSubscript:(NSUInteger)index;
-- (void) loadDataInAmount:(NSInteger)amount;
+- (void)loadDataInAmount:(NSInteger)amount;
 @end

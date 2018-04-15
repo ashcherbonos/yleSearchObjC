@@ -9,10 +9,6 @@
 #import "YLESearchViewController.h"
 #import "YleSearchViewModelBuilder.h"
 
-@interface YLESearchViewController ()
-
-@end
-
 @implementation YLESearchViewController
 
 -(SearchViewModel *)makeViewModel{

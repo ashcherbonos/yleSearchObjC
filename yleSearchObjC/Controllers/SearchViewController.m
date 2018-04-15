@@ -81,8 +81,7 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if(![segue.destinationViewController
-         conformsToProtocol:@protocol(DataConsumer)]) {
+    if(![segue.destinationViewController conformsToProtocol:@protocol(DataConsumer)]) {
         return;
     }
     NSInteger selectedCellIndex = self.tableView.indexPathForSelectedRow.row;

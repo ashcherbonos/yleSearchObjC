@@ -20,24 +20,24 @@
     XCTAssert(true);
 }
 
-- (void) testClassConformsImageLoaderMakerProtocol {
+- (void)testClassConformsImageLoaderMakerProtocol {
     XCTAssert([ImageLoaderWithFadeInFactory conformsToProtocol:@protocol(ImageLoaderMaker)]);
 }
 
-- (void) testMakeResultConformsImageLoaderProtocol {
+- (void)testMakeResultConformsImageLoaderProtocol {
     // Arrange
-    ImageLoaderWithFadeInFactory *factoryUnderTest = [[ImageLoaderWithFadeInFactory alloc]
-                                                    initWithCache:nil networkingManager:nil];
+    ImageLoaderWithFadeInFactory *factoryUnderTest = [[ImageLoaderWithFadeInFactory alloc] initWithCache:nil
+                                                                                       networkingManager:nil];
     // Act
     id result = [factoryUnderTest make];
     // Assert
     XCTAssert([result conformsToProtocol:@protocol(ImageLoader)]);
 }
 
-- (void) testMakeResultIsMemberOfClassImageLoaderWithFadeIn {
+- (void)testMakeResultIsMemberOfClassImageLoaderWithFadeIn {
     // Arrange
-    ImageLoaderWithFadeInFactory *factoryUnderTest = [[ImageLoaderWithFadeInFactory alloc]
-                                                      initWithCache:nil networkingManager:nil];
+    ImageLoaderWithFadeInFactory *factoryUnderTest = [[ImageLoaderWithFadeInFactory alloc] initWithCache:nil
+                                                                                       networkingManager:nil];
     // Act
     id result = [factoryUnderTest make];
     // Assert

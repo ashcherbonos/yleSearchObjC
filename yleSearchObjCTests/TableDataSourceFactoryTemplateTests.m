@@ -20,16 +20,15 @@
     XCTAssert(true);
 }
 
-- (void) testClassConformsTableDataSourcerMakerProtocol {
+- (void)testClassConformsTableDataSourcerMakerProtocol {
     XCTAssert([TableDataSourceFactoryTemplate conformsToProtocol:@protocol(TableDataSourcerMaker)]);
 }
 
-- (void) testMakeResultConformsTableDataSourceProtocol {
+- (void)testMakeResultConformsTableDataSourceProtocol {
     // Arrange
-    TableDataSourceFactoryTemplate *factoryUnderTest = [[TableDataSourceFactoryTemplate alloc]
-                                                        initWithURLMaker:nil
-                                                        parser:nil
-                                                        networkManager:nil];
+    TableDataSourceFactoryTemplate *factoryUnderTest = [[TableDataSourceFactoryTemplate alloc] initWithURLMaker:nil
+                                                                                                         parser:nil
+                                                                                                 networkManager:nil];
     // Act
     id result = [factoryUnderTest makeWithQuery:@"test query" completion:^{}];
     // Assert

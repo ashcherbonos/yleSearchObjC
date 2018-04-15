@@ -18,16 +18,15 @@
 
 @implementation ImageLoaderWithFadeInTests
 
-
 - (void)testUnitTestsWorksCorrect {
     XCTAssert(true);
 }
 
-- (void) testClassConformsImageLoaderProtocol {
+- (void)testClassConformsImageLoaderProtocol {
     XCTAssert([ImageLoaderWithFadeIn conformsToProtocol:@protocol(ImageLoader)]);
 }
 
-- (void) testDelegateNotRetained {
+- (void)testDelegateNotRetained {
     // Arrange
     id <ImageLoaderDelegate> delegate = [[ImageLoaderDelegateMock alloc] init];
     ImageLoaderWithFadeIn *loadernUnderTest = [[ImageLoaderWithFadeIn alloc] initWithCache:nil
@@ -39,26 +38,24 @@
     XCTAssertNil(loadernUnderTest.delegate);
 }
 
-- (void) testMakeStubSetImageIntoImageView {
+- (void)testMakeStubSetImageIntoImageView {
     // Arrange
     ImageLoaderWithFadeIn *loadernUnderTest = [[ImageLoaderWithFadeIn alloc] initWithCache:nil
                                                                          networkingManager:nil];
     UIImageView *imageView = [[UIImageView alloc] init];
     // Act
-    [loadernUnderTest makeStubFor:imageView
-                        withLabel:@"A"];
+    [loadernUnderTest makeStubFor:imageView withLabel:@"A"];
     // Assert
     XCTAssertNotNil(imageView.image);
 }
 
-- (void) testLoadSetImageIntoImageView {
+- (void)testLoadSetImageIntoImageView {
     // Arrange
     XCTestExpectation *expectation = [self expectationWithDescription:@"complition"];
     id <ImageLoaderDelegate> delegate = [[ImageLoaderDelegateMock alloc] initWithExpectation:expectation];
-    UIImage *image = [UIImage
-                      imageNamed:@"testImage.png"
-                      inBundle:[NSBundle bundleForClass:[self class]]
-                      compatibleWithTraitCollection:nil];
+    UIImage *image = [UIImage imageNamed:@"testImage.png"
+                                inBundle:[NSBundle bundleForClass:[self class]]
+           compatibleWithTraitCollection:nil];
     NSData *expectedImageData = UIImagePNGRepresentation(image);
     id <NetworkingManager> networkingManagerMock = [[NetworkingManagerMock alloc] initWithData:expectedImageData];
     ImageLoaderWithFadeIn *loadernUnderTest = [[ImageLoaderWithFadeIn alloc] initWithCache:nil

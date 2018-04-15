@@ -20,10 +20,9 @@
 
 - (UIImage *)testImage {
     if(!_testImage){
-        _testImage = [UIImage
-                      imageNamed:@"testImage.png"
-                      inBundle:[NSBundle bundleForClass:[ImageCacheTests class]]
-                      compatibleWithTraitCollection:nil];
+        _testImage = [UIImage imageNamed:@"testImage.png"
+                                inBundle:[NSBundle bundleForClass:[ImageCacheTests class]]
+           compatibleWithTraitCollection:nil];
     }
     return _testImage;
 }
@@ -47,7 +46,7 @@
     XCTAssertEqual(cacheUnderTest[url], self.testImage);
 }
 
-- (void) testEmptyDeleteAllCache {
+- (void)testEmptyDeleteAllCache {
     // Arrange
     ImageCache *cacheUnderTest = [[ImageCache alloc] init];
     NSURL *url = [NSURL URLWithString:@"testUrlString"];

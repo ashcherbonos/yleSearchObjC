@@ -16,7 +16,6 @@
 @property (strong, nonatomic, readonly) id <ImageCacher> cache;
 @end
 
-
 @implementation SearchViewModel
 
 - (NSInteger)dataCount {
@@ -30,7 +29,6 @@
 - (BOOL)isReady {
     return !self.loadingData;
 }
-
 
 -(instancetype)initWithDelegate:(id <SearchViewModelDelegate>)delegate
               dataSourceFactory:(id <TableDataSourcerMaker>)dataSourceFactory
@@ -46,8 +44,7 @@
     return self;
 }
 
-
-- (void) searchFor:(NSString *)query {
+- (void)searchFor:(NSString *)query {
     self.dataSource = [self.dataSourceFactory
                        makeWithQuery:query
                        completion:^{
@@ -57,23 +54,23 @@
     [self loadData];
 }
 
-- (void) loadMoreData {
+- (void)loadMoreData {
     [self loadData];
 }
 
-- (void) fillConsumer:(id <DataConsumer>)consumer
+- (void)fillConsumer:(id <DataConsumer>)consumer
         withDataIndex:(NSUInteger) index {
     id <ImageLoader> imageLoader = [self.imageLoaderFactory make];
     [consumer fillWithData:self.dataSource[index]
                imageLoader:imageLoader];
 }
 
-- (void) loadData {
+- (void)loadData {
     self.loadingData = true;
     [self.dataSource loadDataInAmount:20];
 }
 
-- (void) emptyMemory{
+- (void)emptyMemory{
     [self.cache empty];
 }
 

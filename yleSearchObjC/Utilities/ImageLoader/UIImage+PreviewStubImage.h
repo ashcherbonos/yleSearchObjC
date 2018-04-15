@@ -9,10 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (PreviewStubImage)
-
 -(instancetype)initWithSize:(CGSize)size
               circleDiametr:(CGFloat)diameter
                    stubChar:(char)character;
-
-
 @end

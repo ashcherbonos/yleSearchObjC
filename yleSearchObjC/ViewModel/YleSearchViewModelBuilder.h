@@ -14,5 +14,5 @@
 #import "ImageLoaderWithFadeInFactory.h"
 
 @interface YleSearchViewModelBuilder : NSObject
--(SearchViewModel *) makeWithDelegate:(id<SearchViewModelDelegate>)delegate;
+-(SearchViewModel *)makeWithDelegate:(id<SearchViewModelDelegate>)delegate;
 @end

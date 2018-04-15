@@ -52,23 +52,22 @@
 }
 
 - (TableDataSourceTemplate *)makeInstanceUnderTestWithComplition:(void (^)(void))complition {
-    return [[TableDataSourceTemplate alloc]
-                              initWithSearch:@"testSearch"
-                              urlMaker:nil
-                              parser:self.parser
-                              networkManager:self.networkingManagerMock
-                              completion:complition];
+    return [[TableDataSourceTemplate alloc] initWithSearch:@"testSearch"
+                                                  urlMaker:nil
+                                                    parser:self.parser
+                                            networkManager:self.networkingManagerMock
+                                                completion:complition];
 }
 
 - (void)testUnitTestsWorksCorrect {
     XCTAssert(true);
 }
 
-- (void) testClassConformsTableDataSourceProtocol {
+- (void)testClassConformsTableDataSourceProtocol {
     XCTAssert([TableDataSourceTemplate conformsToProtocol:@protocol(TableDataSource)]);
 }
 
-- (void) testInstanceStartWithNoData {
+- (void)testInstanceStartWithNoData {
     // Arrange
     int expectedCount = 0;
     // Act
@@ -77,7 +76,7 @@
     XCTAssertEqual(templateUnderTest.count, expectedCount);
 }
 
-- (void) testloadDataInAmountReturnsExpectedDaraAmount {
+- (void)testloadDataInAmountReturnsExpectedDaraAmount {
     // Arrange
     int expectedCount = 2;
     XCTestExpectation *expectation = [self expectationWithDescription:@"complition"];

@@ -62,20 +62,20 @@
     XCTAssert(true);
 }
 
-- (void) testClassConformsJSONParserProtocol {
+- (void)testClassConformsJSONParserProtocol {
     XCTAssert([YleJSONParser conformsToProtocol:@protocol(JSONParser)]);
 }
 
-- (void) testParseReturnNotNil {
+- (void)testParseReturnNotNil {
     // Assert
     XCTAssertNotNil(self.result);
 }
 
-- (void) testParseResultIsArrayOfTvProgramClass {
+- (void)testParseResultIsArrayOfTvProgramClass {
     XCTAssert([self.firstItem isKindOfClass:[TvProgram class]]);
 }
 
-- (void) testParseReturnExpectedDataAmount {
+- (void)testParseReturnExpectedDataAmount {
     // Arrange
     NSUInteger expectedCount = 2;
     // Act
@@ -84,7 +84,7 @@
     XCTAssertEqual(expectedCount, resultCount);
 }
 
-- (void) testParseReturnExpectedTitle {
+- (void)testParseReturnExpectedTitle {
     // Arrange
     NSString *expectedTitle = @"Oktonautit ja merikilpikonnanpoikaset";
     // Act
@@ -93,7 +93,7 @@
     XCTAssert([expectedTitle isEqualToString:resultTitle]);
 }
 
-- (void) testParseReturnExpectedDescription {
+- (void)testParseReturnExpectedDescription {
     // Arrange
     NSString *expectedDescription = @"Oktonautit ja merikilpikonnanpoikaset. Suuri aalto uhkaa pieniä merikilpikonnanpoikasia.";
     // Act
@@ -102,7 +102,7 @@
     XCTAssert([expectedDescription isEqualToString:resultDescription]);
 }
 
-- (void) testParseReturnExpectedDataModified {
+- (void)testParseReturnExpectedDataModified {
     // Arrange
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy/MM/dd HH:mm:ss.SSS";
@@ -113,7 +113,7 @@
     XCTAssert([expectedDataModified  isEqualToDate:resultDataModified]);
 }
 
-- (void) testParseReturnExpectedProgramType {
+- (void)testParseReturnExpectedProgramType {
     // Arrange
     NSString *expectedProgramType = @"TVProgram";
     // Act
@@ -122,7 +122,7 @@
     XCTAssert([expectedProgramType isEqualToString:resultProgramType]);
 }
 
-- (void) testParseReturnExpectedPreviewImageURL{
+- (void)testParseReturnExpectedPreviewImageURL{
     // Arrange
     NSString *expectedUrlString = @"https://images.cdn.yle.fi/image/upload/w_256,h_256,c_thumb,r_max/bo_20px_solid_white/13-1-3391628-1522918692260.png";
     // Act
@@ -131,7 +131,7 @@
     XCTAssert([resultPreviewImageURL.absoluteString isEqualToString:expectedUrlString]);
 }
 
-- (void) testParseReturnExpectedFullImageURL{
+- (void)testParseReturnExpectedFullImageURL{
     // Arrange
     int minDeviceSize = MIN(UIScreen.mainScreen.bounds.size.height, UIScreen.mainScreen.bounds.size.width);
     NSString *expectedUrlString = [NSString stringWithFormat: @"https://images.cdn.yle.fi/image/upload/w_%d,h_%d,c_fill/13-1-3391628-1522918692260.png", minDeviceSize, minDeviceSize];

@@ -21,14 +21,13 @@
     XCTAssert(true);
 }
 
-- (void) testClassConformsTableDataSourcerMakerProtocol {
+- (void)testClassConformsTableDataSourcerMakerProtocol {
     XCTAssert([YleTableDataSourcerFactory conformsToProtocol:@protocol(TableDataSourcerMaker)]);
 }
 
-- (void) testMakeResultConformsTableDataSourceProtocol {
+- (void)testMakeResultConformsTableDataSourceProtocol {
     // Arrange
-    YleTableDataSourcerFactory *factoryUnderTest = [[YleTableDataSourcerFactory alloc]
-                                                    initWithNetworkingManager:nil];
+    YleTableDataSourcerFactory *factoryUnderTest = [[YleTableDataSourcerFactory alloc] initWithNetworkingManager:nil];
     // Act
     id result = [factoryUnderTest makeWithQuery:@"test query" completion:^{}];
     // Assert

@@ -30,12 +30,11 @@
 
 - (id <TableDataSource>)makeWithQuery:(NSString *)query
                            completion:(void(^)(void))completion {
-    return [[TableDataSourceTemplate alloc]
-            initWithSearch:query
-            urlMaker:self.urlMaker
-            parser:self.parser
-            networkManager:self.networkManager
-            completion:completion];
+    return [[TableDataSourceTemplate alloc] initWithSearch:query
+                                                  urlMaker:self.urlMaker
+                                                    parser:self.parser
+                                            networkManager:self.networkManager
+                                                completion:completion];
 }
 
 @end

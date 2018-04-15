@@ -12,16 +12,13 @@
 
 -(SearchViewModel *) makeWithDelegate:(id<SearchViewModelDelegate>)delegate {
     NetworkingManagerShared *networkManager = [[NetworkingManagerShared alloc] init];
-    YleTableDataSourcerFactory *tableDataSourcerFactory = [[YleTableDataSourcerFactory alloc]
-                                                          initWithNetworkingManager:networkManager];
+    YleTableDataSourcerFactory *dataSourcerFactory = [[YleTableDataSourcerFactory alloc] initWithNetworkingManager:networkManager];
     ImageCache *cache = [[ImageCache alloc] init];
-    ImageLoaderWithFadeInFactory *imageLoaderFactory = [[ImageLoaderWithFadeInFactory alloc]
-                                                        initWithCache:cache
-                                                        networkingManager:networkManager];
-    return [[SearchViewModel alloc]
-            initWithDelegate:delegate
-            dataSourceFactory:tableDataSourcerFactory
-            imageLoaderFactory:imageLoaderFactory
-            cache:cache];
+    ImageLoaderWithFadeInFactory *imageLoaderFactory = [[ImageLoaderWithFadeInFactory alloc] initWithCache:cache
+                                                                                         networkingManager:networkManager];
+    return [[SearchViewModel alloc] initWithDelegate:delegate
+                                   dataSourceFactory:dataSourcerFactory
+                                  imageLoaderFactory:imageLoaderFactory
+                                               cache:cache];
 }
 @end

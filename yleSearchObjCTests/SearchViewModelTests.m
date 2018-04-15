@@ -32,18 +32,16 @@
     return _jsonTestData;
 }
 
--(SearchViewModel *) makeSearchViewModelWithDelegate:(id<SearchViewModelDelegate>)delegate {
+-(SearchViewModel *)makeSearchViewModelWithDelegate:(id<SearchViewModelDelegate>)delegate {
     NetworkingManagerMock *networkManager = [[NetworkingManagerMock alloc] initWithData:self.jsonTestData];
     YleTableDataSourcerFactory *tableDataSourcerFactory = [[YleTableDataSourcerFactory alloc] initWithNetworkingManager:networkManager];
     ImageCache *cache = [[ImageCache alloc] init];
-    ImageLoaderWithFadeInFactory *imageLoaderFactory = [[ImageLoaderWithFadeInFactory alloc]
-                                                        initWithCache:cache
-                                                        networkingManager:networkManager];
-    return [[SearchViewModel alloc]
-            initWithDelegate:delegate
-            dataSourceFactory:tableDataSourcerFactory
-            imageLoaderFactory:imageLoaderFactory
-            cache:cache];
+    ImageLoaderWithFadeInFactory *imageLoaderFactory = [[ImageLoaderWithFadeInFactory alloc] initWithCache:cache
+                                                                                         networkingManager:networkManager];
+    return [[SearchViewModel alloc] initWithDelegate:delegate
+                                   dataSourceFactory:tableDataSourcerFactory
+                                  imageLoaderFactory:imageLoaderFactory
+                                               cache:cache];
 }
 
 
@@ -51,7 +49,7 @@
     XCTAssert(true);
 }
 
-- (void) testDelegateNotRetained {
+- (void)testDelegateNotRetained {
     // Arrange
     id<SearchViewModelDelegate> delegate = [[SearchViewModelDelegateMock alloc] init];
     // Act
@@ -61,7 +59,7 @@
     XCTAssertNil(mvvmUnderTest.delegate);
 }
 
-- (void) testDataCountIsEmptyAtStart{
+- (void)testDataCountIsEmptyAtStart{
     // Arrange
     NSInteger expectedDataCount = 0;
     // Act
@@ -71,7 +69,7 @@
     XCTAssertEqual(returnedDataCount, expectedDataCount);
 }
 
-- (void) testSearchReturnExpectedDataAmount{
+- (void)testSearchReturnExpectedDataAmount{
     // Arrange
     NSInteger expectedDataCount = 2;
     XCTestExpectation *expectation = [self expectationWithDescription:@"handler executed"];
@@ -85,7 +83,7 @@
     XCTAssertEqual(returnedDataCount, expectedDataCount);
 }
 
-- (void) testLoadMoreDataReturnExpectedDataAmount{
+- (void)testLoadMoreDataReturnExpectedDataAmount{
     // Arrange
     NSInteger expectedDataCount = 4;
     XCTestExpectation *firstExpectation = [self expectationWithDescription:@"handler executed once"];
@@ -104,7 +102,7 @@
     XCTAssertEqual(returnedDataCount, expectedDataCount);
 }
 
-- (void) testFillDataConsumer {
+- (void)testFillDataConsumer {
     // Arrange
     NSInteger expectedDataCount = 2;
     XCTestExpectation *expectationMVVMLoadData = [self expectationWithDescription:@"MVVM load data"];

@@ -12,9 +12,8 @@
 
 - (void) resumeDataTaskWithUrl:(NSURL *)url
              completionHandler:(NetworkingManagerCompletion)completionHandler {
-    NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession]
-                                          dataTaskWithURL:url
-                                          completionHandler:completionHandler];
+    NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession] dataTaskWithURL:url
+                                                                     completionHandler:completionHandler];
     [downloadTask resume];
 }
 

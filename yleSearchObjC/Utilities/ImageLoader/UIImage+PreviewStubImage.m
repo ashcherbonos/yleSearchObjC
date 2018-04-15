@@ -29,7 +29,6 @@
 }
 
 + (UIColor *)colorForChar:(char)character {
-    
     int amountOfCases = 6;
     switch(character % amountOfCases) {
     case 0: return [UIColor colorWithDisplayP3Red:0.2392156869 green:0.6745098233 blue:0.9686274529 alpha:1];
@@ -41,17 +40,13 @@
     }
 }
 
-+ (void) drowCircleInRect:(CGRect)rect
-                    color:(UIColor *)color {
-    
++ (void) drowCircleInRect:(CGRect)rect color:(UIColor *)color {
     UIBezierPath *circle = [UIBezierPath bezierPathWithOvalInRect:rect];
     [color setFill];
     [circle fill];
 }
 
-+ (void) drowChar:(char)character
-               in:(CGRect)rect {
-    
++ (void) drowChar:(char)character in:(CGRect)rect {
     NSString *string = [NSString stringWithFormat:@"%c" , character];
     NSMutableAttributedString *stringToDraw = [[NSMutableAttributedString alloc] initWithString:string];
     NSMutableParagraphStyle *paragrafSyle = [[NSMutableParagraphStyle alloc] init];

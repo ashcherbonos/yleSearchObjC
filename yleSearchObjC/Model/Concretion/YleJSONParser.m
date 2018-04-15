@@ -21,9 +21,8 @@
 }
 
 - (NSArray *)parse:(NSData *)data {
-    NSDictionary *jsonDictionary = [NSJSONSerialization
-                                    JSONObjectWithData:data
-                                    options:0 error:nil];
+    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data
+                                                                   options:0 error:nil];
     NSArray *jsonDataArray = jsonDictionary[@"data"];
     return [self parseProgramsArray:jsonDataArray];
 }
@@ -43,14 +42,12 @@
     NSString *dataModifiedString = item[@"indexDataModified"];
     NSString *programType = item[@"type"];
     NSString *imageID = item[@"image"][@"id"];
-    
-    TvProgram *tvProgram = [[TvProgram alloc]
-                            initWithTitle:title
-                            fullDescription:fullDescription
-                            dataModified:[self converteStringToDate:dataModifiedString]
-                            programType:programType
-                            previewImageURL:[self makePreviewImageURL:imageID]
-                            fullImageURL:[self makeFullImageURL:imageID]];
+    TvProgram *tvProgram = [[TvProgram alloc] initWithTitle:title
+                                            fullDescription:fullDescription
+                                               dataModified:[self converteStringToDate:dataModifiedString]
+                                                programType:programType
+                                            previewImageURL:[self makePreviewImageURL:imageID]
+                                               fullImageURL:[self makeFullImageURL:imageID]];
     return tvProgram;
 }
 

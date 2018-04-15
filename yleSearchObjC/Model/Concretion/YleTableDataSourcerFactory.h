@@ -11,5 +11,5 @@
 #import "NetworkingManager.h"
 
 @interface YleTableDataSourcerFactory : NSObject <TableDataSourcerMaker>
-- (instancetype)initWithNetworkingManager:( id <NetworkingManager> )networkManager;
+- (instancetype)initWithNetworkingManager:(id <NetworkingManager> )networkManager;
 @end

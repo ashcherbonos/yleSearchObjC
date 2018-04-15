@@ -11,14 +11,11 @@
 @implementation NSDate (timeAgoAsString)
 
 - (NSString *)timeAgoAsString {
-    
     const int day = 3600*24;
     const int week = day*7;
     const int month = day*30;
     const int year = month*12;
-    
     int secondsAgo = (int)[[NSDate date] timeIntervalSinceDate:self];
-    
     switch (secondsAgo) {
     case 0 ... day:
             return @"today";

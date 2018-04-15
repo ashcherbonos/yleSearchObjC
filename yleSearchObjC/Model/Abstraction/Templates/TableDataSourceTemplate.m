@@ -12,19 +12,19 @@
 @property NSMutableArray *items;
 @property (nonatomic, readonly) NSString *searchTerm;
 @property (nonatomic, readonly) id <URLMaker> urlMaker;
-@property (nonatomic, readonly)id <JSONParser> parser;
-@property (nonatomic, readonly)id <NetworkingManager> networkManager;
-@property (nonatomic, readonly)TableDataSourceComplition completion;
-@property (nonatomic)BOOL moreResultsAvaliable;
+@property (nonatomic, readonly) id <JSONParser> parser;
+@property (nonatomic, readonly) id <NetworkingManager> networkManager;
+@property (nonatomic, readonly) TableDataSourceComplition completion;
+@property (nonatomic) BOOL moreResultsAvaliable;
 @end
 
 @implementation TableDataSourceTemplate
 
-- (instancetype) initWithSearch:(NSString *)searchTerm
-                       urlMaker:(id <URLMaker>)urlMaker
-                         parser:(id <JSONParser>)parser
-                 networkManager:(id <NetworkingManager>)networkManager
-                     completion:(TableDataSourceComplition)completion{
+- (instancetype)initWithSearch:(NSString *)searchTerm
+                      urlMaker:(id <URLMaker>)urlMaker
+                        parser:(id <JSONParser>)parser
+                networkManager:(id <NetworkingManager>)networkManager
+                    completion:(TableDataSourceComplition)completion {
     self = [super init];
     if(self){
         _searchTerm = searchTerm;
@@ -46,21 +46,22 @@
     return self.items[index];
 }
 
-- (void) loadDataInAmount:(NSInteger)amount {
+- (void)loadDataInAmount:(NSInteger)amount {
     __weak typeof(self) weakSelf = self;
-    if(!self.moreResultsAvaliable) { return;}
+    if(!self.moreResultsAvaliable) {
+        return;
+    }
     NSURL *url = [self.urlMaker makeUrlFromQuery:self.searchTerm
                                          offset:self.items.count
                                           limit:amount];
-    [self.networkManager
-     resumeDataTaskWithUrl:url
-     completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
-         if(error){return;}
-         NSArray *items = [weakSelf.parser parse:data];
-         weakSelf.moreResultsAvaliable = items.count > 0;
-         [weakSelf.items addObjectsFromArray:items];
-         dispatch_async(dispatch_get_main_queue(), ^{weakSelf.completion();});
-     }];
+    [self.networkManager resumeDataTaskWithUrl:url
+                             completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
+                                 if(error){return;}
+                                 NSArray *items = [weakSelf.parser parse:data];
+                                 weakSelf.moreResultsAvaliable = items.count > 0;
+                                 [weakSelf.items addObjectsFromArray:items];
+                                 dispatch_async(dispatch_get_main_queue(), ^{weakSelf.completion();});
+                             }];
 }
 
 @end

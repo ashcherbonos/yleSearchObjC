@@ -17,13 +17,12 @@
 
 @implementation YleTableDataSourcerFactory
 
-- (instancetype)initWithNetworkingManager:( id <NetworkingManager>)networkManager {
+- (instancetype)initWithNetworkingManager:(id <NetworkingManager>)networkManager {
     self = [super init];
     if(self){
-        _factory = [[TableDataSourceFactoryTemplate alloc]
-                    initWithURLMaker:[[YleURLMaker alloc] init]
-                    parser:[[YleJSONParser alloc] init]
-                    networkManager:networkManager];
+        _factory = [[TableDataSourceFactoryTemplate alloc] initWithURLMaker:[[YleURLMaker alloc] init]
+                                                                     parser:[[YleJSONParser alloc] init]
+                                                             networkManager:networkManager];
     }
     return self;
 }

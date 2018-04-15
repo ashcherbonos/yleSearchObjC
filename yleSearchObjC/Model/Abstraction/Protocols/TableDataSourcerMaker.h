@@ -10,6 +10,5 @@
 #import "TableDataSource.h"
 
 @protocol TableDataSourcerMaker <NSObject>
-- (id <TableDataSource>)makeWithQuery:(NSString *)query
-                           completion:(void(^)(void))completion;
+- (id <TableDataSource>)makeWithQuery:(NSString *)query completion:(void(^)(void))completion;
 @end

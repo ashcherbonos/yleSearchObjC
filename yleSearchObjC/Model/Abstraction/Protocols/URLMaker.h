@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @protocol URLMaker <NSObject>
-- (NSURL *) makeUrlFromQuery:(NSString *)query offset:(NSUInteger)offset limit:(NSUInteger)limit;
+- (NSURL *)makeUrlFromQuery:(NSString *)query offset:(NSUInteger)offset limit:(NSUInteger)limit;
 @end

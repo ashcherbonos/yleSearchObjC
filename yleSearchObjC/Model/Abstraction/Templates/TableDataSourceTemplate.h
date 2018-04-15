@@ -13,12 +13,10 @@
 #import "NetworkingManager.h"
 
 @interface TableDataSourceTemplate : NSObject <TableDataSource>
-
 typedef void (^TableDataSourceComplition)(void);
-
-- (instancetype) initWithSearch:(NSString *)searchTerm
-                       urlMaker:(id <URLMaker>)urlMaker
-                         parser:(id <JSONParser>)parser
-                 networkManager:(id <NetworkingManager>)networkManager
-                     completion:(TableDataSourceComplition)completion;
+- (instancetype)initWithSearch:(NSString *)searchTerm
+                      urlMaker:(id <URLMaker>)urlMaker
+                        parser:(id <JSONParser>)parser
+                networkManager:(id <NetworkingManager>)networkManager
+                    completion:(TableDataSourceComplition)completion;
 @end

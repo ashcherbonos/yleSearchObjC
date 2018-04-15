@@ -9,10 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol NetworkingManager <NSObject>
-
 typedef void (^NetworkingManagerCompletion)(NSData *, NSURLResponse *, NSError *);
-
-- (void) resumeDataTaskWithUrl:(NSURL *)url
-             completionHandler:(NetworkingManagerCompletion)completionHandler;
-
+- (void)resumeDataTaskWithUrl:(NSURL *)url
+            completionHandler:(NetworkingManagerCompletion)completionHandler;
 @end

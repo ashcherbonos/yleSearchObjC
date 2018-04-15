@@ -11,7 +11,6 @@
 #import "NetworkingManager.h"
 
 @interface NetworkingManagerSharedTests : XCTestCase
-
 @end
 
 @implementation NetworkingManagerSharedTests
@@ -20,7 +19,7 @@
     XCTAssert(true);
 }
 
-- (void) testClassConformsNetworkingManagerProtocol {
+- (void)testClassConformsNetworkingManagerProtocol {
     XCTAssert([NetworkingManagerShared conformsToProtocol:@protocol(NetworkingManager)]);
 }
 

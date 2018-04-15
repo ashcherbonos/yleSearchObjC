@@ -10,5 +10,4 @@
 #import "SearchViewController.h"
 
 @interface YLESearchViewController : SearchViewController
-
 @end

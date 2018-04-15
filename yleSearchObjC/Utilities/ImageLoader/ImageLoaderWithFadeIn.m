@@ -29,8 +29,7 @@
     return self;
 }
 
-- (void)loadURL:(NSURL *)url
-  intoImageView:(UIImageView *)imageView {
+- (void)loadURL:(NSURL *)url intoImageView:(UIImageView *)imageView {
     __weak typeof(self) weakSelf = self;
     if(!url) { return; }
     UIImage *cachedImage = self.cache[url];
@@ -66,9 +65,7 @@
                                            stubChar:[label characterAtIndex:0]];
 };
 
-- (void) fadeImage:(UIImage *)image
-                in:(UIImageView *)imageView {
-    
+- (void)fadeImage:(UIImage *)image in:(UIImageView *)imageView {
     [UIView transitionWithView:imageView
                       duration:IMAGE_FADE_IN_DURATION
                        options:UIViewAnimationOptionTransitionCrossDissolve

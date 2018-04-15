@@ -25,23 +25,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.imageLoader loadURL:self.programm.fullImageURL
-                intoImageView:self.imageView];
+    [self.imageLoader loadURL:self.programm.fullImageURL intoImageView:self.imageView];
     self.titleLabel.text = self.programm.title;
     self.typeLabel.text = self.programm.programType;
     self.dateLabel.text = [self.programm.dataModified timeAgoAsString];
     self.descriptionLabel.text = self.programm.fullDescription;
 }
 
-- (void) fillWithData:(id)data
-          imageLoader:(id <ImageLoader>)imageLoader {
-    if(![data isMemberOfClass:[TvProgram class]]){return;}
-    
+#pragma mark - DataConsumer
+
+- (void)fillWithData:(id)data imageLoader:(id <ImageLoader>)imageLoader {
+    if(![data isMemberOfClass:[TvProgram class]]){
+        return;
+    }
     self.programm = (TvProgram*)data;
     self.imageLoader = imageLoader;
     self.imageLoader.delegate = self;
 }
+
+#pragma mark - ImageLoaderDelegate
 
 - (void)imageDidLoad:(BOOL)success{
     [self.activityIndicator stopAnimating];

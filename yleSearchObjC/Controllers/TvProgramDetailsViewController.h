@@ -11,5 +11,4 @@
 #import "ImageLoader.h"
 
 @interface TvProgramDetailsViewController : UIViewController <DataConsumer, ImageLoaderDelegate>
-
 @end

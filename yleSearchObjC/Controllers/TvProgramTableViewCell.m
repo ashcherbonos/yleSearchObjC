@@ -16,18 +16,18 @@
 
 @implementation TvProgramTableViewCell
 
-- (void) fillWithData:(id)data
-          imageLoader:(id <ImageLoader>)imageLoader {
-    if(![data isMemberOfClass:[TvProgram class]]){return;}
-    
+#pragma mark - DataConsumer
+
+- (void)fillWithData:(id)data imageLoader:(id <ImageLoader>)imageLoader {
+    if(![data isMemberOfClass:[TvProgram class]]){
+        return;
+    }
     TvProgram *programm = (TvProgram *)data;
     self.textLabel.text = programm.title;
     self.detailTextLabel.text = programm.fullDescription;
     self.imageLoader = imageLoader;
-    [self.imageLoader makeStubFor:self.imageView
-                        withLabel:programm.title];
-    [self.imageLoader loadURL:programm.previewImageURL
-                intoImageView:self.imageView];
+    [self.imageLoader makeStubFor:self.imageView withLabel:programm.title];
+    [self.imageLoader loadURL:programm.previewImageURL intoImageView:self.imageView];
 }
 
 @end
