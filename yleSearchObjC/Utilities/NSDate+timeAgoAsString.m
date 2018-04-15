@@ -25,19 +25,19 @@
     case (day+1) ... (2*day):
             return @"1 day ago";
     case (2*day+1) ... week:
-            return @"\(secondsAgo/day) days ago";
+            return [NSString stringWithFormat:@"%d days ago", (secondsAgo/day)];
     case (week+1) ... (2*week):
             return @"1 week ago";
     case (2*week+1) ... month:
-            return @"\(secondsAgo/week) weeks ago";
+            return [NSString stringWithFormat:@"%d weeks ago", (secondsAgo/week)];
     case (month+1) ... (2*month):
             return @"1 month ago";
     case (2*month+1) ... year:
-            return @"\(secondsAgo/month) months ago";
+            [NSString stringWithFormat:@"%d months ago", (secondsAgo/month)];
     case (year+1) ... (2*year):
             return @"1 year ago";
     default:
-            return @"\(secondsAgo/year) years ago";
+            return [NSString stringWithFormat:@"%d years ago", (secondsAgo/year)];
     }
 }
 

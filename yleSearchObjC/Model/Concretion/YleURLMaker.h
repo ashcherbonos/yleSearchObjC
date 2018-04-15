@@ -11,5 +11,4 @@
 #import "URLMaker.h"
 
 @interface YleURLMaker : NSObject <URLMaker>
-- (instancetype)initWithAppId:(NSString *)appId appKey:(NSString *)appKey;
 @end

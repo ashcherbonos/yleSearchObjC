@@ -17,7 +17,7 @@
 @end
 
 @protocol DataConsumer <NSObject>
-- (void) fillWithData:(NSArray *)data
+- (void) fillWithData:(id)data
           imageLoader:(id <ImageLoader>)imageLoader;
 @end
 

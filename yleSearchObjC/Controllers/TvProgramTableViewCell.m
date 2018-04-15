@@ -16,13 +16,13 @@
 
 @implementation TvProgramTableViewCell
 
-- (void) fillWithData:(NSArray *)data
+- (void) fillWithData:(id)data
           imageLoader:(id <ImageLoader>)imageLoader {
     if(![data isMemberOfClass:[TvProgram class]]){return;}
     
     TvProgram *programm = (TvProgram *)data;
     self.textLabel.text = programm.title;
-    self.detailTextLabel.text = programm.description;
+    self.detailTextLabel.text = programm.fullDescription;
     self.imageLoader = imageLoader;
     [self.imageLoader makeStubFor:self.imageView
                         withLabel:programm.title];

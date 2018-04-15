@@ -14,7 +14,7 @@
 @interface SearchViewController () <SearchViewModelDelegate, UISearchControllerDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) SearchViewModel *viewModel;
-@property (strong, nonatomic) UISearchController *searchController;
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
@@ -24,7 +24,8 @@
     [super viewDidLoad];
     YleSearchViewModelBuilder *viewModelBuilder = [[YleSearchViewModelBuilder alloc] init];
     self.viewModel = [viewModelBuilder makeWithDelegate:self];
-    [self makeSearchBarInNavigationBar];
+    //[self makeSearchBarInNavigationBar];
+    self.searchBar.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,26 +42,15 @@
 #pragma mark - Search Bar
 
 - (void)dismissKeyboard {
-    [self.searchController resignFirstResponder];
+   [self.searchBar resignFirstResponder];
 }
 
-- (void)makeSearchBarInNavigationBar {
-    self.searchController = [[UISearchController alloc] initWithSearchResultsController:self];
-    self.searchController.delegate = self;
-    self.searchController.searchBar.delegate = self;
-    self.searchController.hidesNavigationBarDuringPresentation = false;
-    self.searchController.dimsBackgroundDuringPresentation = false;
-    self.searchController.searchBar.tintColor = [UIColor lightGrayColor];
-    self.searchController.searchBar.showsCancelButton = false;
-    self.navigationItem.titleView = self.searchController.searchBar;
-    self.definesPresentationContext = true;
-}
-
-- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [self dismissKeyboard];
     if(!searchBar.text) {return;}
     [self.viewModel searchFor:searchBar.text];
 }
+
 
 #pragma mark - Table View
 

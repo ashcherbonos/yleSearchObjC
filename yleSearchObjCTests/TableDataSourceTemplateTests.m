@@ -84,7 +84,7 @@
     TableDataSourceTemplate *templateUnderTest = [self makeInstanceUnderTestWithComplition:^{ [expectation fulfill]; }];
     // Act
     [templateUnderTest loadDataInAmount:2];
-    [self waitForExpectationsWithTimeout:5 handler:^(NSError * error) { NSLog(@"Error: %@", error); }];
+    [self waitForExpectations:@[expectation] timeout:5];
     // Assert
     XCTAssertEqual(templateUnderTest.count, expectedCount);
 }

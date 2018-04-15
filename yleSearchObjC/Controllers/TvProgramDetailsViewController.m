@@ -34,7 +34,7 @@
     self.descriptionLabel.text = self.programm.fullDescription;
 }
 
-- (void) fillWithData:(NSArray *)data
+- (void) fillWithData:(id)data
           imageLoader:(id <ImageLoader>)imageLoader {
     if(![data isMemberOfClass:[TvProgram class]]){return;}
     
@@ -49,6 +49,5 @@
         [self.imageView removeFromSuperview];
     }
 }
-
 
 @end

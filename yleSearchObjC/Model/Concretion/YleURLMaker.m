@@ -8,22 +8,7 @@
 
 #import "YleURLMaker.h"
 
-@interface YleURLMaker()
-@property (strong, nonatomic) NSString * appId;
-@property (strong, nonatomic) NSString * appKey;
-@end
-
 @implementation YleURLMaker
-
-- (instancetype)initWithAppId:(NSString *)appId
-                       appKey:(NSString *)appKey {
-    self = [super init];
-    if(self){
-        self.appId = appId;
-        self.appKey = appKey;
-    }
-    return self;
-}
 
 - (NSURL *) makeUrlFromQuery:(NSString *)query
                       offset:(NSUInteger)offset
@@ -43,10 +28,10 @@
                                  value: query];
     NSURLQueryItem *appidItem = [NSURLQueryItem
                                  queryItemWithName:@"app_id"
-                                 value: self.appId];
+                                 value: @"73f7299c"];
     NSURLQueryItem *appkeyItem = [NSURLQueryItem
                                   queryItemWithName:@"app_key"
-                                  value: self.appKey];
+                                  value: @"41a235aabc2fc3c4f9bba2627cca97bc"];
     components.queryItems = @[offsetItem,
                               limitItem,
                               queryItem,

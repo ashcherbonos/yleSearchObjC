@@ -42,6 +42,8 @@
 		E44BA5442083B67500080D74 /* TvProgramTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA5432083B67500080D74 /* TvProgramTableViewCell.m */; };
 		E44BA5472083B93200080D74 /* TvProgramDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA5462083B93200080D74 /* TvProgramDetailsViewController.m */; };
 		E44BA54A2083BCF700080D74 /* NSDate+timeAgoAsString.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA5492083BCF700080D74 /* NSDate+timeAgoAsString.m */; };
+		E44BA54C2083DABB00080D74 /* SearchViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA54B2083DABB00080D74 /* SearchViewModelTests.m */; };
+		E44BA54F2083DB1600080D74 /* SearchViewModelDelegateMock.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA54E2083DB1600080D74 /* SearchViewModelDelegateMock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,9 @@
 		E44BA5462083B93200080D74 /* TvProgramDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TvProgramDetailsViewController.m; sourceTree = "<group>"; };
 		E44BA5482083BCF700080D74 /* NSDate+timeAgoAsString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+timeAgoAsString.h"; sourceTree = "<group>"; };
 		E44BA5492083BCF700080D74 /* NSDate+timeAgoAsString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+timeAgoAsString.m"; sourceTree = "<group>"; };
+		E44BA54B2083DABB00080D74 /* SearchViewModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewModelTests.m; sourceTree = "<group>"; };
+		E44BA54D2083DB1600080D74 /* SearchViewModelDelegateMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewModelDelegateMock.h; sourceTree = "<group>"; };
+		E44BA54E2083DB1600080D74 /* SearchViewModelDelegateMock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewModelDelegateMock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +167,8 @@
 		E44BA4832080947000080D74 /* yleSearchObjC */ = {
 			isa = PBXGroup;
 			children = (
-				E44BA5172083603300080D74 /* ViewModel */,
 				E44BA49B2080969100080D74 /* Controllers */,
+				E44BA5172083603300080D74 /* ViewModel */,
 				E44BA49A208094EE00080D74 /* Supporting Files */,
 				E44BA49F2080972900080D74 /* Model */,
 				E44BA4FC20824BFE00080D74 /* Networking */,
@@ -242,6 +247,7 @@
 				E44BA5302083972600080D74 /* ImageLoaderWithFadeInTests.m */,
 				E44BA5012082524400080D74 /* NetworkingManagerSharedTests.m */,
 				E44BA4DA2080C68900080D74 /* Info.plist */,
+				E44BA54B2083DABB00080D74 /* SearchViewModelTests.m */,
 				E44BA503208299DB00080D74 /* TableDataSourceTemplateTests.m */,
 				E44BA51020835B1300080D74 /* TableDataSourceFactoryTemplateTests.m */,
 				E44BA51520835EC700080D74 /* YleTableDataSourcerFactoryTests.m */,
@@ -277,6 +283,8 @@
 				E44BA50720829A0B00080D74 /* NetworkingManagerMock.m */,
 				E44BA532208397BD00080D74 /* ImageLoaderDelegateMock.h */,
 				E44BA533208397BD00080D74 /* ImageLoaderDelegateMock.m */,
+				E44BA54D2083DB1600080D74 /* SearchViewModelDelegateMock.h */,
+				E44BA54E2083DB1600080D74 /* SearchViewModelDelegateMock.m */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -483,6 +491,8 @@
 				E44BA5312083972600080D74 /* ImageLoaderWithFadeInTests.m in Sources */,
 				E44BA51120835B1300080D74 /* TableDataSourceFactoryTemplateTests.m in Sources */,
 				E44BA53A2083A36200080D74 /* ImageLoaderWithFadeInFactoryTests.m in Sources */,
+				E44BA54C2083DABB00080D74 /* SearchViewModelTests.m in Sources */,
+				E44BA54F2083DB1600080D74 /* SearchViewModelDelegateMock.m in Sources */,
 				E44BA4E12080C6C000080D74 /* YleURLMakerTests.m in Sources */,
 				E44BA5022082524400080D74 /* NetworkingManagerSharedTests.m in Sources */,
 				E44BA526208370A200080D74 /* ImageCacheTests.m in Sources */,

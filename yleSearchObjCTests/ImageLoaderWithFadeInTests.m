@@ -70,7 +70,7 @@
     [loadernUnderTest loadURL:url
                 intoImageView:imageView];
     // Assert
-    [self waitForExpectationsWithTimeout:5 handler:^(NSError * error) { NSLog(@"Error: %@", error); }];
+    [self waitForExpectations:@[expectation] timeout:5];
     XCTAssertNotNil(imageView.image);
     NSData *resultImageData = UIImagePNGRepresentation(imageView.image);
     XCTAssert([resultImageData isEqualToData:expectedImageData]);
