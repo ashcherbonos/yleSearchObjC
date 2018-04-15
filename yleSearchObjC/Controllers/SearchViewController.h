@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchViewModel.h"
 
-@interface SearchViewController : UIViewController
-
+// abstract class
+@interface SearchViewController : UIViewController <SearchViewModelDelegate>
+-(SearchViewModel *)makeViewModel; // abstract method
 @end

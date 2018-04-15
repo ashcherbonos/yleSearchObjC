@@ -7,6 +7,7 @@
 //
 
 #import "YleURLMaker.h"
+#import "AppConstants.h"
 
 @implementation YleURLMaker
 
@@ -28,10 +29,10 @@
                                  value: query];
     NSURLQueryItem *appidItem = [NSURLQueryItem
                                  queryItemWithName:@"app_id"
-                                 value: @"73f7299c"];
+                                 value: YLE_APP_ID];
     NSURLQueryItem *appkeyItem = [NSURLQueryItem
                                   queryItemWithName:@"app_key"
-                                  value: @"41a235aabc2fc3c4f9bba2627cca97bc"];
+                                  value: YLE_APP_KEY];
     components.queryItems = @[offsetItem,
                               limitItem,
                               queryItem,

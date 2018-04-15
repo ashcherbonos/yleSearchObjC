@@ -44,6 +44,8 @@
 		E44BA54A2083BCF700080D74 /* NSDate+timeAgoAsString.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA5492083BCF700080D74 /* NSDate+timeAgoAsString.m */; };
 		E44BA54C2083DABB00080D74 /* SearchViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA54B2083DABB00080D74 /* SearchViewModelTests.m */; };
 		E44BA54F2083DB1600080D74 /* SearchViewModelDelegateMock.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA54E2083DB1600080D74 /* SearchViewModelDelegateMock.m */; };
+		E44BA5522083EA8500080D74 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA5512083EA8500080D74 /* AppConstants.m */; };
+		E44BA5552083EF2400080D74 /* YLESearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA5542083EF2400080D74 /* YLESearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +128,10 @@
 		E44BA54B2083DABB00080D74 /* SearchViewModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewModelTests.m; sourceTree = "<group>"; };
 		E44BA54D2083DB1600080D74 /* SearchViewModelDelegateMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewModelDelegateMock.h; sourceTree = "<group>"; };
 		E44BA54E2083DB1600080D74 /* SearchViewModelDelegateMock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewModelDelegateMock.m; sourceTree = "<group>"; };
+		E44BA5502083EA8500080D74 /* AppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+		E44BA5512083EA8500080D74 /* AppConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
+		E44BA5532083EF2400080D74 /* YLESearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLESearchViewController.h; sourceTree = "<group>"; };
+		E44BA5542083EF2400080D74 /* YLESearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLESearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +182,8 @@
 				E44BA48A2080947100080D74 /* Main.storyboard */,
 				E44BA4922080947200080D74 /* Info.plist */,
 				E44BA4932080947200080D74 /* main.m */,
+				E44BA5502083EA8500080D74 /* AppConstants.h */,
+				E44BA5512083EA8500080D74 /* AppConstants.m */,
 			);
 			path = yleSearchObjC;
 			sourceTree = "<group>";
@@ -196,6 +204,8 @@
 			children = (
 				E44BA49C208096AB00080D74 /* SearchViewController.h */,
 				E44BA49D208096AB00080D74 /* SearchViewController.m */,
+				E44BA5532083EF2400080D74 /* YLESearchViewController.h */,
+				E44BA5542083EF2400080D74 /* YLESearchViewController.m */,
 				E44BA5452083B93200080D74 /* TvProgramDetailsViewController.h */,
 				E44BA5462083B93200080D74 /* TvProgramDetailsViewController.m */,
 				E44BA5422083B67500080D74 /* TvProgramTableViewCell.h */,
@@ -471,6 +481,7 @@
 				E44BA4FF20824C1300080D74 /* NetworkingManagerShared.m in Sources */,
 				E44BA49E208096AB00080D74 /* SearchViewController.m in Sources */,
 				E44BA5472083B93200080D74 /* TvProgramDetailsViewController.m in Sources */,
+				E44BA5552083EF2400080D74 /* YLESearchViewController.m in Sources */,
 				E44BA4862080947000080D74 /* AppDelegate.m in Sources */,
 				E44BA4CE2080B34A00080D74 /* YleURLMaker.m in Sources */,
 				E44BA52F20837D6500080D74 /* UIImage+PreviewStubImage.m in Sources */,
@@ -478,6 +489,7 @@
 				E44BA51A2083605600080D74 /* SearchViewModel.m in Sources */,
 				E44BA5382083A16200080D74 /* ImageLoaderWithFadeInFactory.m in Sources */,
 				E44BA4D12080C40F00080D74 /* YleJSONParser.m in Sources */,
+				E44BA5522083EA8500080D74 /* AppConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

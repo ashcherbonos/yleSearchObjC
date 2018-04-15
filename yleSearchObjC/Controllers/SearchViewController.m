@@ -8,23 +8,29 @@
 
 #import "SearchViewController.h"
 #import "SearchViewModel.h"
-#import "YleSearchViewModelBuilder.h"
 #import "TvProgramTableViewCell.h"
 
-@interface SearchViewController () <SearchViewModelDelegate, UISearchControllerDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface SearchViewController () <UISearchControllerDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) SearchViewModel *viewModel;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
-
+@property (strong, nonatomic) SearchViewModel *viewModel; // abstract property
 @end
 
 @implementation SearchViewController
 
+-(SearchViewModel *)viewModel{
+    if(!_viewModel){
+        _viewModel = [self makeViewModel];
+    }
+    return _viewModel;
+}
+
+-(SearchViewModel *)makeViewModel{
+    return nil;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    YleSearchViewModelBuilder *viewModelBuilder = [[YleSearchViewModelBuilder alloc] init];
-    self.viewModel = [viewModelBuilder makeWithDelegate:self];
-    //[self makeSearchBarInNavigationBar];
     self.searchBar.delegate = self;
 }
 

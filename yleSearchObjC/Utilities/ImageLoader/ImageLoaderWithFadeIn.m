@@ -8,6 +8,7 @@
 
 #import "ImageLoaderWithFadeIn.h"
 #import "UIImage+PreviewStubImage.h"
+#import "AppConstants.h"
 
 @interface ImageLoaderWithFadeIn()
 @property (strong, nonatomic, readonly) id <ImageCacher> cache;
@@ -58,8 +59,8 @@
 }
 
 - (void)makeStubFor:(UIImageView *)imageView withLabel:(NSString *)label{
-    CGSize size = CGSizeMake(256, 256);
-    CGFloat diameter = 200;
+    CGSize size = CGSizeMake(PREVIEW_IMAGE_FULL_SIZE, PREVIEW_IMAGE_FULL_SIZE);
+    CGFloat diameter = PREVIEW_IMAGE_DIAMETER;
     imageView.image = [[UIImage alloc] initWithSize:size
                                       circleDiametr:diameter
                                            stubChar:[label characterAtIndex:0]];
@@ -69,7 +70,7 @@
                 in:(UIImageView *)imageView {
     
     [UIView transitionWithView:imageView
-                      duration:0.5
+                      duration:IMAGE_FADE_IN_DURATION
                        options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^{ imageView.image = image; }
                     completion:nil];
