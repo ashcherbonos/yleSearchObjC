@@ -31,7 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.searchBar.delegate = self;
+    self.searchBar.tintColor = [UIColor lightGrayColor];
 }
 
 - (void)didReceiveMemoryWarning {
