@@ -1,8 +1,8 @@
 # yleSearchObjC
 
-yleSearch
 
 Test project in Objective-C.
+
 (Same project in Swift: https://github.com/ashcherbonos/yleSearch)
 
 The task is to search programs from the Yle API:  http://developer.yle.fi/tutorials.html 
