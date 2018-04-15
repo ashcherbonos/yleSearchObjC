@@ -8,28 +8,130 @@
 
 /* Begin PBXBuildFile section */
 		E44BA4862080947000080D74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA4852080947000080D74 /* AppDelegate.m */; };
-		E44BA4892080947100080D74 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA4882080947100080D74 /* ViewController.m */; };
 		E44BA48C2080947100080D74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E44BA48A2080947100080D74 /* Main.storyboard */; };
 		E44BA48E2080947200080D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44BA48D2080947200080D74 /* Assets.xcassets */; };
 		E44BA4912080947200080D74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E44BA48F2080947200080D74 /* LaunchScreen.storyboard */; };
 		E44BA4942080947200080D74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA4932080947200080D74 /* main.m */; };
+		E44BA49E208096AB00080D74 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA49D208096AB00080D74 /* SearchViewController.m */; };
+		E44BA4CE2080B34A00080D74 /* YleURLMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA4CD2080B34A00080D74 /* YleURLMaker.m */; };
+		E44BA4D12080C40F00080D74 /* YleJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA4D02080C40F00080D74 /* YleJSONParser.m */; };
+		E44BA4E12080C6C000080D74 /* YleURLMakerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA4E02080C6C000080D74 /* YleURLMakerTests.m */; };
+		E44BA4E52080D1A900080D74 /* TvProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA4E42080D1A900080D74 /* TvProgram.m */; };
+		E44BA4E92082026500080D74 /* YleJSONParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA4E82082026500080D74 /* YleJSONParserTests.m */; };
+		E44BA4EC2082045E00080D74 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = E44BA4EB2082045E00080D74 /* test.json */; };
+		E44BA4FB2082496200080D74 /* TableDataSourceTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA4FA2082496200080D74 /* TableDataSourceTemplate.m */; };
+		E44BA4FF20824C1300080D74 /* NetworkingManagerShared.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA4FE20824C1300080D74 /* NetworkingManagerShared.m */; };
+		E44BA5022082524400080D74 /* NetworkingManagerSharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA5012082524400080D74 /* NetworkingManagerSharedTests.m */; };
+		E44BA504208299DB00080D74 /* TableDataSourceTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA503208299DB00080D74 /* TableDataSourceTemplateTests.m */; };
+		E44BA50820829A0B00080D74 /* NetworkingManagerMock.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA50720829A0B00080D74 /* NetworkingManagerMock.m */; };
+		E44BA50C2083523000080D74 /* TableDataSourceFactoryTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA50B2083523000080D74 /* TableDataSourceFactoryTemplate.m */; };
+		E44BA51120835B1300080D74 /* TableDataSourceFactoryTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA51020835B1300080D74 /* TableDataSourceFactoryTemplateTests.m */; };
+		E44BA51420835D0F00080D74 /* YleTableDataSourcerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA51320835D0F00080D74 /* YleTableDataSourcerFactory.m */; };
+		E44BA51620835EC700080D74 /* YleTableDataSourcerFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA51520835EC700080D74 /* YleTableDataSourcerFactoryTests.m */; };
+		E44BA51A2083605600080D74 /* SearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA5192083605600080D74 /* SearchViewModel.m */; };
+		E44BA52020836C4800080D74 /* ImageLoaderWithFadeIn.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA51F20836C4800080D74 /* ImageLoaderWithFadeIn.m */; };
+		E44BA52420836DAE00080D74 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA52320836DAE00080D74 /* ImageCache.m */; };
+		E44BA526208370A200080D74 /* ImageCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA525208370A200080D74 /* ImageCacheTests.m */; };
+		E44BA5282083719400080D74 /* testImage.png in Resources */ = {isa = PBXBuildFile; fileRef = E44BA5272083719400080D74 /* testImage.png */; };
+		E44BA52F20837D6500080D74 /* UIImage+PreviewStubImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA52E20837D6500080D74 /* UIImage+PreviewStubImage.m */; };
+		E44BA5312083972600080D74 /* ImageLoaderWithFadeInTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA5302083972600080D74 /* ImageLoaderWithFadeInTests.m */; };
+		E44BA534208397BD00080D74 /* ImageLoaderDelegateMock.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA533208397BD00080D74 /* ImageLoaderDelegateMock.m */; };
+		E44BA5382083A16200080D74 /* ImageLoaderWithFadeInFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA5372083A16200080D74 /* ImageLoaderWithFadeInFactory.m */; };
+		E44BA53A2083A36200080D74 /* ImageLoaderWithFadeInFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA5392083A36200080D74 /* ImageLoaderWithFadeInFactoryTests.m */; };
+		E44BA5412083AB1800080D74 /* YleSearchViewModelBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA5402083AB1800080D74 /* YleSearchViewModelBuilder.m */; };
+		E44BA5442083B67500080D74 /* TvProgramTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA5432083B67500080D74 /* TvProgramTableViewCell.m */; };
+		E44BA5472083B93200080D74 /* TvProgramDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA5462083B93200080D74 /* TvProgramDetailsViewController.m */; };
+		E44BA54A2083BCF700080D74 /* NSDate+timeAgoAsString.m in Sources */ = {isa = PBXBuildFile; fileRef = E44BA5492083BCF700080D74 /* NSDate+timeAgoAsString.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E44BA4DB2080C68900080D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E44BA4792080947000080D74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E44BA4802080947000080D74;
+			remoteInfo = yleSearchObjC;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E44BA4812080947000080D74 /* yleSearchObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yleSearchObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44BA4842080947000080D74 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E44BA4852080947000080D74 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E44BA4872080947000080D74 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E44BA4882080947100080D74 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E44BA48B2080947100080D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E44BA48D2080947200080D74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E44BA4902080947200080D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E44BA4922080947200080D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E44BA4932080947200080D74 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E44BA49C208096AB00080D74 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		E44BA49D208096AB00080D74 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		E44BA4CA2080B14400080D74 /* URLMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLMaker.h; sourceTree = "<group>"; };
+		E44BA4CC2080B34A00080D74 /* YleURLMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YleURLMaker.h; sourceTree = "<group>"; };
+		E44BA4CD2080B34A00080D74 /* YleURLMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YleURLMaker.m; sourceTree = "<group>"; };
+		E44BA4CF2080C40F00080D74 /* YleJSONParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YleJSONParser.h; sourceTree = "<group>"; };
+		E44BA4D02080C40F00080D74 /* YleJSONParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YleJSONParser.m; sourceTree = "<group>"; };
+		E44BA4D62080C68900080D74 /* yleSearchObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yleSearchObjCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E44BA4DA2080C68900080D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E44BA4E02080C6C000080D74 /* YleURLMakerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YleURLMakerTests.m; sourceTree = "<group>"; };
+		E44BA4E32080D1A900080D74 /* TvProgram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TvProgram.h; sourceTree = "<group>"; };
+		E44BA4E42080D1A900080D74 /* TvProgram.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TvProgram.m; sourceTree = "<group>"; };
+		E44BA4E82082026500080D74 /* YleJSONParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YleJSONParserTests.m; sourceTree = "<group>"; };
+		E44BA4EB2082045E00080D74 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		E44BA4F82082470800080D74 /* JSONParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
+		E44BA4F92082496200080D74 /* TableDataSourceTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableDataSourceTemplate.h; sourceTree = "<group>"; };
+		E44BA4FA2082496200080D74 /* TableDataSourceTemplate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableDataSourceTemplate.m; sourceTree = "<group>"; };
+		E44BA4FD20824C1300080D74 /* NetworkingManagerShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingManagerShared.h; sourceTree = "<group>"; };
+		E44BA4FE20824C1300080D74 /* NetworkingManagerShared.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkingManagerShared.m; sourceTree = "<group>"; };
+		E44BA500208251DC00080D74 /* NetworkingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingManager.h; sourceTree = "<group>"; };
+		E44BA5012082524400080D74 /* NetworkingManagerSharedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkingManagerSharedTests.m; sourceTree = "<group>"; };
+		E44BA503208299DB00080D74 /* TableDataSourceTemplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableDataSourceTemplateTests.m; sourceTree = "<group>"; };
+		E44BA50620829A0B00080D74 /* NetworkingManagerMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingManagerMock.h; sourceTree = "<group>"; };
+		E44BA50720829A0B00080D74 /* NetworkingManagerMock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkingManagerMock.m; sourceTree = "<group>"; };
+		E44BA5092082A1BA00080D74 /* TableDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableDataSource.h; sourceTree = "<group>"; };
+		E44BA50A2083523000080D74 /* TableDataSourceFactoryTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableDataSourceFactoryTemplate.h; sourceTree = "<group>"; };
+		E44BA50B2083523000080D74 /* TableDataSourceFactoryTemplate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableDataSourceFactoryTemplate.m; sourceTree = "<group>"; };
+		E44BA50D208354C400080D74 /* TableDataSourcerMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableDataSourcerMaker.h; sourceTree = "<group>"; };
+		E44BA51020835B1300080D74 /* TableDataSourceFactoryTemplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableDataSourceFactoryTemplateTests.m; sourceTree = "<group>"; };
+		E44BA51220835D0F00080D74 /* YleTableDataSourcerFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YleTableDataSourcerFactory.h; sourceTree = "<group>"; };
+		E44BA51320835D0F00080D74 /* YleTableDataSourcerFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YleTableDataSourcerFactory.m; sourceTree = "<group>"; };
+		E44BA51520835EC700080D74 /* YleTableDataSourcerFactoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YleTableDataSourcerFactoryTests.m; sourceTree = "<group>"; };
+		E44BA5182083605600080D74 /* SearchViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewModel.h; sourceTree = "<group>"; };
+		E44BA5192083605600080D74 /* SearchViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewModel.m; sourceTree = "<group>"; };
+		E44BA51D20836B2600080D74 /* ImageLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageLoader.h; sourceTree = "<group>"; };
+		E44BA51E20836C4800080D74 /* ImageLoaderWithFadeIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageLoaderWithFadeIn.h; sourceTree = "<group>"; };
+		E44BA51F20836C4800080D74 /* ImageLoaderWithFadeIn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageLoaderWithFadeIn.m; sourceTree = "<group>"; };
+		E44BA52120836CE700080D74 /* ImageCacher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCacher.h; sourceTree = "<group>"; };
+		E44BA52220836DAE00080D74 /* ImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
+		E44BA52320836DAE00080D74 /* ImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
+		E44BA525208370A200080D74 /* ImageCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCacheTests.m; sourceTree = "<group>"; };
+		E44BA5272083719400080D74 /* testImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testImage.png; sourceTree = "<group>"; };
+		E44BA52D20837D6500080D74 /* UIImage+PreviewStubImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+PreviewStubImage.h"; sourceTree = "<group>"; };
+		E44BA52E20837D6500080D74 /* UIImage+PreviewStubImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PreviewStubImage.m"; sourceTree = "<group>"; };
+		E44BA5302083972600080D74 /* ImageLoaderWithFadeInTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageLoaderWithFadeInTests.m; sourceTree = "<group>"; };
+		E44BA532208397BD00080D74 /* ImageLoaderDelegateMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageLoaderDelegateMock.h; sourceTree = "<group>"; };
+		E44BA533208397BD00080D74 /* ImageLoaderDelegateMock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageLoaderDelegateMock.m; sourceTree = "<group>"; };
+		E44BA5362083A16200080D74 /* ImageLoaderWithFadeInFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageLoaderWithFadeInFactory.h; sourceTree = "<group>"; };
+		E44BA5372083A16200080D74 /* ImageLoaderWithFadeInFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageLoaderWithFadeInFactory.m; sourceTree = "<group>"; };
+		E44BA5392083A36200080D74 /* ImageLoaderWithFadeInFactoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageLoaderWithFadeInFactoryTests.m; sourceTree = "<group>"; };
+		E44BA53F2083AB1800080D74 /* YleSearchViewModelBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YleSearchViewModelBuilder.h; sourceTree = "<group>"; };
+		E44BA5402083AB1800080D74 /* YleSearchViewModelBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YleSearchViewModelBuilder.m; sourceTree = "<group>"; };
+		E44BA5422083B67500080D74 /* TvProgramTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TvProgramTableViewCell.h; sourceTree = "<group>"; };
+		E44BA5432083B67500080D74 /* TvProgramTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TvProgramTableViewCell.m; sourceTree = "<group>"; };
+		E44BA5452083B93200080D74 /* TvProgramDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TvProgramDetailsViewController.h; sourceTree = "<group>"; };
+		E44BA5462083B93200080D74 /* TvProgramDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TvProgramDetailsViewController.m; sourceTree = "<group>"; };
+		E44BA5482083BCF700080D74 /* NSDate+timeAgoAsString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+timeAgoAsString.h"; sourceTree = "<group>"; };
+		E44BA5492083BCF700080D74 /* NSDate+timeAgoAsString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+timeAgoAsString.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E44BA47E2080947000080D74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E44BA4D32080C68900080D74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				E44BA4832080947000080D74 /* yleSearchObjC */,
+				E44BA4D72080C68900080D74 /* yleSearchObjCTests */,
 				E44BA4822080947000080D74 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				E44BA4812080947000080D74 /* yleSearchObjC.app */,
+				E44BA4D62080C68900080D74 /* yleSearchObjCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,17 +162,191 @@
 		E44BA4832080947000080D74 /* yleSearchObjC */ = {
 			isa = PBXGroup;
 			children = (
-				E44BA4842080947000080D74 /* AppDelegate.h */,
-				E44BA4852080947000080D74 /* AppDelegate.m */,
-				E44BA4872080947000080D74 /* ViewController.h */,
-				E44BA4882080947100080D74 /* ViewController.m */,
+				E44BA5172083603300080D74 /* ViewModel */,
+				E44BA49B2080969100080D74 /* Controllers */,
+				E44BA49A208094EE00080D74 /* Supporting Files */,
+				E44BA49F2080972900080D74 /* Model */,
+				E44BA4FC20824BFE00080D74 /* Networking */,
+				E44BA51B20836B0200080D74 /* Utilities */,
 				E44BA48A2080947100080D74 /* Main.storyboard */,
-				E44BA48D2080947200080D74 /* Assets.xcassets */,
-				E44BA48F2080947200080D74 /* LaunchScreen.storyboard */,
 				E44BA4922080947200080D74 /* Info.plist */,
 				E44BA4932080947200080D74 /* main.m */,
 			);
 			path = yleSearchObjC;
+			sourceTree = "<group>";
+		};
+		E44BA49A208094EE00080D74 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E44BA4842080947000080D74 /* AppDelegate.h */,
+				E44BA4852080947000080D74 /* AppDelegate.m */,
+				E44BA48D2080947200080D74 /* Assets.xcassets */,
+				E44BA48F2080947200080D74 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E44BA49B2080969100080D74 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E44BA49C208096AB00080D74 /* SearchViewController.h */,
+				E44BA49D208096AB00080D74 /* SearchViewController.m */,
+				E44BA5452083B93200080D74 /* TvProgramDetailsViewController.h */,
+				E44BA5462083B93200080D74 /* TvProgramDetailsViewController.m */,
+				E44BA5422083B67500080D74 /* TvProgramTableViewCell.h */,
+				E44BA5432083B67500080D74 /* TvProgramTableViewCell.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E44BA49F2080972900080D74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E44BA4A02080974B00080D74 /* Abstraction */,
+				E44BA4CB2080B32200080D74 /* Concretion */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E44BA4A02080974B00080D74 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				E44BA50E2083550800080D74 /* Protocols */,
+				E44BA50F2083551000080D74 /* Templates */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		E44BA4CB2080B32200080D74 /* Concretion */ = {
+			isa = PBXGroup;
+			children = (
+				E44BA4CC2080B34A00080D74 /* YleURLMaker.h */,
+				E44BA4CD2080B34A00080D74 /* YleURLMaker.m */,
+				E44BA4CF2080C40F00080D74 /* YleJSONParser.h */,
+				E44BA4D02080C40F00080D74 /* YleJSONParser.m */,
+				E44BA51220835D0F00080D74 /* YleTableDataSourcerFactory.h */,
+				E44BA51320835D0F00080D74 /* YleTableDataSourcerFactory.m */,
+				E44BA4E32080D1A900080D74 /* TvProgram.h */,
+				E44BA4E42080D1A900080D74 /* TvProgram.m */,
+			);
+			path = Concretion;
+			sourceTree = "<group>";
+		};
+		E44BA4D72080C68900080D74 /* yleSearchObjCTests */ = {
+			isa = PBXGroup;
+			children = (
+				E44BA505208299FA00080D74 /* Mocks */,
+				E44BA4EA2082043C00080D74 /* Data */,
+				E44BA4E02080C6C000080D74 /* YleURLMakerTests.m */,
+				E44BA4E82082026500080D74 /* YleJSONParserTests.m */,
+				E44BA5302083972600080D74 /* ImageLoaderWithFadeInTests.m */,
+				E44BA5012082524400080D74 /* NetworkingManagerSharedTests.m */,
+				E44BA4DA2080C68900080D74 /* Info.plist */,
+				E44BA503208299DB00080D74 /* TableDataSourceTemplateTests.m */,
+				E44BA51020835B1300080D74 /* TableDataSourceFactoryTemplateTests.m */,
+				E44BA51520835EC700080D74 /* YleTableDataSourcerFactoryTests.m */,
+				E44BA525208370A200080D74 /* ImageCacheTests.m */,
+				E44BA5392083A36200080D74 /* ImageLoaderWithFadeInFactoryTests.m */,
+			);
+			path = yleSearchObjCTests;
+			sourceTree = "<group>";
+		};
+		E44BA4EA2082043C00080D74 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E44BA5272083719400080D74 /* testImage.png */,
+				E44BA4EB2082045E00080D74 /* test.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E44BA4FC20824BFE00080D74 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E44BA4FD20824C1300080D74 /* NetworkingManagerShared.h */,
+				E44BA4FE20824C1300080D74 /* NetworkingManagerShared.m */,
+				E44BA500208251DC00080D74 /* NetworkingManager.h */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E44BA505208299FA00080D74 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E44BA50620829A0B00080D74 /* NetworkingManagerMock.h */,
+				E44BA50720829A0B00080D74 /* NetworkingManagerMock.m */,
+				E44BA532208397BD00080D74 /* ImageLoaderDelegateMock.h */,
+				E44BA533208397BD00080D74 /* ImageLoaderDelegateMock.m */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E44BA50E2083550800080D74 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E44BA4CA2080B14400080D74 /* URLMaker.h */,
+				E44BA4F82082470800080D74 /* JSONParser.h */,
+				E44BA5092082A1BA00080D74 /* TableDataSource.h */,
+				E44BA50D208354C400080D74 /* TableDataSourcerMaker.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E44BA50F2083551000080D74 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				E44BA4F92082496200080D74 /* TableDataSourceTemplate.h */,
+				E44BA4FA2082496200080D74 /* TableDataSourceTemplate.m */,
+				E44BA50A2083523000080D74 /* TableDataSourceFactoryTemplate.h */,
+				E44BA50B2083523000080D74 /* TableDataSourceFactoryTemplate.m */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		E44BA5172083603300080D74 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E44BA5182083605600080D74 /* SearchViewModel.h */,
+				E44BA5192083605600080D74 /* SearchViewModel.m */,
+				E44BA53F2083AB1800080D74 /* YleSearchViewModelBuilder.h */,
+				E44BA5402083AB1800080D74 /* YleSearchViewModelBuilder.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E44BA51B20836B0200080D74 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E44BA5292083775300080D74 /* ImageCache */,
+				E44BA51C20836B1A00080D74 /* ImageLoader */,
+				E44BA5482083BCF700080D74 /* NSDate+timeAgoAsString.h */,
+				E44BA5492083BCF700080D74 /* NSDate+timeAgoAsString.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E44BA51C20836B1A00080D74 /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				E44BA51D20836B2600080D74 /* ImageLoader.h */,
+				E44BA51E20836C4800080D74 /* ImageLoaderWithFadeIn.h */,
+				E44BA51F20836C4800080D74 /* ImageLoaderWithFadeIn.m */,
+				E44BA52D20837D6500080D74 /* UIImage+PreviewStubImage.h */,
+				E44BA52E20837D6500080D74 /* UIImage+PreviewStubImage.m */,
+				E44BA5362083A16200080D74 /* ImageLoaderWithFadeInFactory.h */,
+				E44BA5372083A16200080D74 /* ImageLoaderWithFadeInFactory.m */,
+			);
+			path = ImageLoader;
+			sourceTree = "<group>";
+		};
+		E44BA5292083775300080D74 /* ImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				E44BA52120836CE700080D74 /* ImageCacher.h */,
+				E44BA52220836DAE00080D74 /* ImageCache.h */,
+				E44BA52320836DAE00080D74 /* ImageCache.m */,
+			);
+			path = ImageCache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +369,24 @@
 			productReference = E44BA4812080947000080D74 /* yleSearchObjC.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E44BA4D52080C68900080D74 /* yleSearchObjCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E44BA4DD2080C68900080D74 /* Build configuration list for PBXNativeTarget "yleSearchObjCTests" */;
+			buildPhases = (
+				E44BA4D22080C68900080D74 /* Sources */,
+				E44BA4D32080C68900080D74 /* Frameworks */,
+				E44BA4D42080C68900080D74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E44BA4DC2080C68900080D74 /* PBXTargetDependency */,
+			);
+			name = yleSearchObjCTests;
+			productName = yleSearchObjCTests;
+			productReference = E44BA4D62080C68900080D74 /* yleSearchObjCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -102,6 +398,10 @@
 				TargetAttributes = {
 					E44BA4802080947000080D74 = {
 						CreatedOnToolsVersion = 9.3;
+					};
+					E44BA4D52080C68900080D74 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = E44BA4802080947000080D74;
 					};
 				};
 			};
@@ -119,6 +419,7 @@
 			projectRoot = "";
 			targets = (
 				E44BA4802080947000080D74 /* yleSearchObjC */,
+				E44BA4D52080C68900080D74 /* yleSearchObjCTests */,
 			);
 		};
 /* End PBXProject section */
@@ -134,6 +435,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E44BA4D42080C68900080D74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E44BA4EC2082045E00080D74 /* test.json in Resources */,
+				E44BA5282083719400080D74 /* testImage.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,13 +451,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E44BA4892080947100080D74 /* ViewController.m in Sources */,
 				E44BA4942080947200080D74 /* main.m in Sources */,
+				E44BA4E52080D1A900080D74 /* TvProgram.m in Sources */,
+				E44BA5412083AB1800080D74 /* YleSearchViewModelBuilder.m in Sources */,
+				E44BA52020836C4800080D74 /* ImageLoaderWithFadeIn.m in Sources */,
+				E44BA51420835D0F00080D74 /* YleTableDataSourcerFactory.m in Sources */,
+				E44BA54A2083BCF700080D74 /* NSDate+timeAgoAsString.m in Sources */,
+				E44BA5442083B67500080D74 /* TvProgramTableViewCell.m in Sources */,
+				E44BA4FB2082496200080D74 /* TableDataSourceTemplate.m in Sources */,
+				E44BA52420836DAE00080D74 /* ImageCache.m in Sources */,
+				E44BA4FF20824C1300080D74 /* NetworkingManagerShared.m in Sources */,
+				E44BA49E208096AB00080D74 /* SearchViewController.m in Sources */,
+				E44BA5472083B93200080D74 /* TvProgramDetailsViewController.m in Sources */,
 				E44BA4862080947000080D74 /* AppDelegate.m in Sources */,
+				E44BA4CE2080B34A00080D74 /* YleURLMaker.m in Sources */,
+				E44BA52F20837D6500080D74 /* UIImage+PreviewStubImage.m in Sources */,
+				E44BA50C2083523000080D74 /* TableDataSourceFactoryTemplate.m in Sources */,
+				E44BA51A2083605600080D74 /* SearchViewModel.m in Sources */,
+				E44BA5382083A16200080D74 /* ImageLoaderWithFadeInFactory.m in Sources */,
+				E44BA4D12080C40F00080D74 /* YleJSONParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E44BA4D22080C68900080D74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E44BA50820829A0B00080D74 /* NetworkingManagerMock.m in Sources */,
+				E44BA51620835EC700080D74 /* YleTableDataSourcerFactoryTests.m in Sources */,
+				E44BA4E92082026500080D74 /* YleJSONParserTests.m in Sources */,
+				E44BA5312083972600080D74 /* ImageLoaderWithFadeInTests.m in Sources */,
+				E44BA51120835B1300080D74 /* TableDataSourceFactoryTemplateTests.m in Sources */,
+				E44BA53A2083A36200080D74 /* ImageLoaderWithFadeInFactoryTests.m in Sources */,
+				E44BA4E12080C6C000080D74 /* YleURLMakerTests.m in Sources */,
+				E44BA5022082524400080D74 /* NetworkingManagerSharedTests.m in Sources */,
+				E44BA526208370A200080D74 /* ImageCacheTests.m in Sources */,
+				E44BA504208299DB00080D74 /* TableDataSourceTemplateTests.m in Sources */,
+				E44BA534208397BD00080D74 /* ImageLoaderDelegateMock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E44BA4DC2080C68900080D74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E44BA4802080947000080D74 /* yleSearchObjC */;
+			targetProxy = E44BA4DB2080C68900080D74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E44BA48A2080947100080D74 /* Main.storyboard */ = {
@@ -313,6 +665,44 @@
 			};
 			name = Release;
 		};
+		E44BA4DE2080C68900080D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63T6NDQ98H;
+				INFOPLIST_FILE = yleSearchObjCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shcherbonos.yleSearchObjCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yleSearchObjC.app/yleSearchObjC";
+			};
+			name = Debug;
+		};
+		E44BA4DF2080C68900080D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63T6NDQ98H;
+				INFOPLIST_FILE = yleSearchObjCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shcherbonos.yleSearchObjCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yleSearchObjC.app/yleSearchObjC";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -330,6 +720,15 @@
 			buildConfigurations = (
 				E44BA4982080947200080D74 /* Debug */,
 				E44BA4992080947200080D74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E44BA4DD2080C68900080D74 /* Build configuration list for PBXNativeTarget "yleSearchObjCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E44BA4DE2080C68900080D74 /* Debug */,
+				E44BA4DF2080C68900080D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
