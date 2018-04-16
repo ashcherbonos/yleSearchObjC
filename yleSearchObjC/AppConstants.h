@@ -16,4 +16,5 @@ extern NSTimeInterval const IMAGE_FADE_IN_DURATION;
 extern CGFloat const PREVIEW_IMAGE_DIAMETER;
 extern CGFloat const PREVIEW_IMAGE_BORDER;
 extern CGFloat const PREVIEW_IMAGE_FULL_SIZE;
+extern NSInteger const AMOUNT_OF_ROWS_TO_LOADS;
 @end

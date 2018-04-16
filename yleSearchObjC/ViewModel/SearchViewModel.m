@@ -7,6 +7,7 @@
 //
 
 #import "SearchViewModel.h"
+#import "AppConstants.h"
 
 @interface SearchViewModel()
 @property (nonatomic) BOOL loadingData;
@@ -67,7 +68,7 @@
 
 - (void)loadData {
     self.loadingData = true;
-    [self.dataSource loadDataInAmount:20];
+    [self.dataSource loadDataInAmount:AMOUNT_OF_ROWS_TO_LOADS];
 }
 
 - (void)emptyMemory{
